@@ -1,0 +1,38 @@
+<script>
+a = prompt("Enter shift")
+a = parseInt(a)
+caeser = ""  //says caeser is a string
+b = prompt("Enter text")   //get text
+arr = b.split("")    //string to array
+
+for (i = 0; i < arr.length; i ++) {  //goes through characters one at a time
+  res = b.charCodeAt(i)   //characters to ASCII
+  shift = res + a  //add ASCII and shift
+    
+    
+    if ((shift > 90) && (res <= 90)) {  //does Z around to A
+     shift = (((res - 65 + a) % 26) + 65)
+     }
+    
+    else if (shift < 65) {  //does A around to Z
+      shift = (((res - 90 + a) % 26) + 90)
+      }
+      
+    else if ((shift < 97) && (res >= 97)) {  //does a around to z
+      shift = (((res - 122 + a) % 26) + 122)
+      }
+    
+    else if (shift >122) {   //does z around to a
+      shift = (((res - 97 + a) % 26) + 97)
+      }
+
+    if ((res < 65) || ((res > 90) && (res < 97)) || (res > 122)) {
+      shift = res
+      }
+
+  res = String.fromCharCode(shift)  //ASCII to characters
+  caeser = caeser + res  //adding characters together
+  }
+
+alert(caeser) //alerts caeser as one statement
+</script>
