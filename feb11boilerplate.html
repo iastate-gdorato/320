@@ -1,0 +1,14 @@
+<script src="https://linguatorium.com/tools/static/320/tau.js"></script>
+<script src="https://linguatorium.com/tools/static/320/grammar.js"></script>
+<script>
+  rule("S --> NP VP")  //sentence s is a NP and VP; keeps going until terminal words
+  rule("NP --> DET N")  //NP is a det and N 
+  rule("VPT --> VT NP")  //VP is a verb and NP ///first three lines are the grammar
+  rule("VPN --> VN")
+  rule("N --> boy")  //terminal N-boy
+  rule("N --> ball")  //terminal N-ball
+  rule("VT --> hit")  //terminal V-hit
+  rule("DET --> the")  //terminal det-the  ///next few lines are the dictionary
+  rule("VN --> ran")
+  run()
+</script>
