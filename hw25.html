@@ -1,0 +1,44 @@
+<p>Input:<br><textarea id="input" rows="10" cols="80"></textarea>
+<p><button onclick="process()">Process</button>
+<p>Output:<br><textarea id="output" rows="10" cols="80"></textarea>
+
+<script src="https://linguatorium.com/tools/static/320/english_words.js"></script>
+<script src="https://linguatorium.com/tools/static/320/editing_distance.js"></script>
+  
+<script>
+
+function process() { //start function
+  
+  x = document.getElementById("input").value
+  x = x.toLowerCase().replace(/\W+/g, " ").trim() // you don't need to understand this line
+  words = x.split(" ")
+  y = ""
+   
+  for (i=0; i<words.length; i++) {  //start for 1
+    current_word = words[i]
+    word_misspelled = true
+    
+    for (j=0; j < english_words.length; j++) { //start for 2
+      if (english_words[j] === current_word) { //start if 1
+        word_misspelled = false
+      } //end if 1
+    } //end for 2
+   
+    //if (word_misspelled) {
+    	//a = editing_distance(i)
+    	//b = 
+    	
+    if (word_misspelled) { //start if 2
+      y = y + "You have misspelled the word: "+current_word+"\n" + "Did you mean " + "correct word" + " ?" //fix "correct word"
+    }  //end if 2
+  }  //ends for 1
+  
+  
+  if (y.length == 0) { //start if 3
+    y = "No words in your text have been misspelled"
+  } //end if 3
+  document.getElementById("output").value = y
+} //end function
+
+//res = editing_distance("box", "bxo") // res == 2
+</script>
