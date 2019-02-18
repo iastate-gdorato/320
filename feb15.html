@@ -1,0 +1,46 @@
+<script>
+//if (true) {  //homework for 2/15
+  //translations = { "hello": "bonjour", "world": "monde", "fire":"le feu", "water":"l'eau" } 
+  //x = prompt("Enter a word in English")
+  //x = x.toLowerCase()
+  //y = translations[x]
+  //alert(y)
+  //}
+  
+students = [
+  {
+    netid: "alyrose",
+    fname: "Alyssa",
+    lname: "Jennings",
+    grade: "A+",
+    gender: "m"
+  },
+  {
+    netid: "mmiller3",
+    fname: "Daisy",
+    lname: "Miller",
+    grade: "A+",
+    gender: "f"
+  }
+]
+
+//alert(students[0]["name"]) //same as below, alerts first name
+//alert(students[0].name) //same as above
+
+//for (i=0; i<students["length"]; i++) {  //displays both  names
+  //alert(students[i].name)
+  //}
+
+if (gender = "f") {
+  greeting = "Ms."
+  } else if (gender = "m") {
+  greeting = "Mr."
+  }
+
+for (i=0; i<students["length"]; i++) {
+  
+  //add gender differences, if female alert Ms. else male alert Mr.
+  alert("Dear " + greeting + students[i].lname + ", \n\nYour grade is " + students[i].grade)
+  }
+
+</script>
