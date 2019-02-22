@@ -1,0 +1,11 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    x = prompt("Give me a sentence")
+    function process(data) {
+      //console.log(JSON.stringify(data, null, 4))
+      
+      alert(data.sentences[0].tokens[1].pos)
+    }  
+    //hw: write a program that asks the user to enter a sentence then alerts the pos of the second word of the sentence
+    $.getJSON("https://linguatorium.com/tools/320/parse.pl", { text: x }, process);
+</script>
