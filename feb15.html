@@ -13,7 +13,7 @@ students = [
     fname: "Alyssa",
     lname: "Jennings",
     grade: "A+",
-    gender: "m"
+    gender: "f"
   },
   {
     netid: "mmiller3",
@@ -21,6 +21,13 @@ students = [
     lname: "Miller",
     grade: "A+",
     gender: "f"
+  },
+  {
+    netid: "evgeny",
+    fname: "Evgeny",
+    lname: "Chukharev-Hudilainen",
+    grade: "D+",
+    gender: "m",
   }
 ]
 
@@ -31,15 +38,8 @@ students = [
   //alert(students[i].name)
   //}
 
-if (gender = "f") {
-  greeting = "Ms."
-  } else if (gender = "m") {
-  greeting = "Mr."
-  }
-
 for (i=0; i<students["length"]; i++) {
-  
-  //add gender differences, if female alert Ms. else male alert Mr.
+  if (students[i].gender === "m") greeting = "Mr."; else greeting = "Ms."
   alert("Dear " + greeting + students[i].lname + ", \n\nYour grade is " + students[i].grade)
   }
 
