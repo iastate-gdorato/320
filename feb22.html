@@ -1,0 +1,18 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    
+    //notes: https = hypertext transfer protocol secure
+    //     : lemma = dictionary form of the word
+    
+    x = prompt("Give me a sentence")
+    function process(data) {
+      for (i = 0; i < x.length; i++) {
+        tokens = data.sentences[0].tokens.pos[i])
+        if (pos === NN) {
+          alert(tokens)
+          }
+      }
+      
+    }  
+    $.getJSON("https://linguatorium.com/tools/320/parse.pl", { text: x }, process);
+</script>
