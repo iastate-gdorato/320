@@ -1,0 +1,44 @@
+<p>Input:<br><textarea id="input" rows="10" cols="80"></textarea>
+<p><button onclick="process()">Process</button>
+<p>Output:<br><textarea id="output" rows="10" cols="80"></textarea>
+
+<script>
+
+function process() {
+  x = document.getElementById("input").value
+  words = x.split(" ") //string(sentence) to array(group of words)
+  
+  
+  for (i = 0; i < words.length; i ++) {  
+    deta = words.indexOf("a") //finds determiner "a" and gives its index
+    nouna = words [deta + 1] //find the noun after a
+    g = nouna.charAt(0) //gets first character of nouna
+    
+    
+    
+    if (g === "a" || "e" || "i" || "o" || "u") { //if the noun starts with a vowel, then replace a with an
+      y = x.replace(" a ", " an ") 
+      }
+    }
+    
+    
+  //for (i = 0; i < words.length; i ++){
+    
+    detan = words.indexOf("an")  //finds determiner "an" and gives its index
+    nounan = words[detan + 1] //finds the noun after an 
+    f = nounan.charAt() //gets first character of nounan
+    
+    if (f !== "a" || "e" || "i" || "o" || "u") {  //if the noun doesn't start with a vowel, then replace an with a
+      z = x.replace(/ an /g, " a ")
+      }
+    //}
+    
+//have to alert the sentence with both corrections y and z in it
+        
+    
+  
+  //correction = words.join(" ")
+  document.getElementById("output").value = y
+}
+
+</script>
