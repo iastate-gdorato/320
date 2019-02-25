@@ -8,36 +8,31 @@ function process() {
   x = document.getElementById("input").value
   words = x.split(" ") //string(sentence) to array(group of words)
   
-  
-  for (i = 0; i < words.length; i ++) {  
-    deta = words.indexOf("a") //finds determiner "a" and gives its index
-    nouna = words [deta + 1] //find the noun after a
-    g = nouna.charAt(0) //gets first character of nouna
-    
-
-    
-    if (g === "a" || "e" || "i" || "o" || "u") { //if the noun starts with a vowel, then replace a with an
-      y = x.replace(/ a /g, " an ") 
+  for (i = 0; i < words.length; i ++) { 
+    noun = words[i + 1]
+    if (words[i] === "a") {
+      a = noun.charAt(0)
+      if (a === "a" || "e" || "i" || "o" || "u") {
+        words[i] = "an"
+        }
+      else if (a != "a" || "e" || "i" || "o" || "u") {
+        words[i] = "a"
+        }  
       }
-    }
     
-  for (i = 0; i < words.length; i ++){
-    detan = words.indexOf("an")  //finds determiner "an" and gives its index
-    nounan = words[detan + 1] //finds the noun after an 
-    f = nounan.charAt() //gets first character of nounan
-    
-    if (f !== "a" || "e" || "i" || "o" || "u") {  //if the noun doesn't start with a vowel, then replace an with a
-      z = y + x.replace(/ an /g, " a ") //doesn't work...
+    if (words[i] === "an") {
+      a = noun.charAt(0)
+      if (a === "a" || "e" || "i" || "o" || "u") {
+        words[i] = "an"
+        }
+      else if (a != "a" || "e" || "i" || "o" || "u"){
+      words[i] = "a"
+        }
       }
-   //other if statement? z = ...
-    }
-    
-//have to alert the sentence with both corrections y and z in it
-        
-    
+   }   
   
-  correction = words.join(" ")
-  document.getElementById("output").value = z //only replaces a's
+  correction = words.join(" ")  
+  document.getElementById("output").value = correction
 }
 
 </script>
