@@ -8,29 +8,25 @@ function process() {
   x = document.getElementById("input").value
   words = x.split(" ") //string(sentence) to array(group of words)
   
-  for (i = 0; i < words.length; i ++) { 
+  for (i = 0; i < words.length - 1; i ++) { 
+  
     noun = words[i + 1]
     if (words[i] === "a") {
       a = noun.charAt(0)
-      if (a === "a" || "e" || "i" || "o" || "u") {
+      if (a === "a" || a === "e" || a === "i"  || a === "o" || a === "u" ) {
         words[i] = "an"
+        continue;
         }
-      else if (a != "a" || "e" || "i" || "o" || "u") {
-        words[i] = "a"
-        }  
       }
     
     if (words[i] === "an") {
       a = noun.charAt(0)
-      if (a === "a" || "e" || "i" || "o" || "u") {
-        words[i] = "an"
-        }
-      else if (a != "a" || "e" || "i" || "o" || "u"){
-      words[i] = "a"
-        }
-      }
+       if (a !== "a" && a !== "e" && a !== "i" && a !== "o" && a !== "u"){ //not working
+      	words[i] = "a"
+      	continue;
+    	}
    }   
-  
+  }
   correction = words.join(" ")  
   document.getElementById("output").value = correction
 }
