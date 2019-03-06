@@ -1,31 +1,31 @@
 <script>
 
-exercises: {
-  on = [
+exercises = {
+  on: [
     "The vase of flowers is ___ the table.", 
     "He sat ___ the couch.", 
     "The paper is ___ his desk.", 
     "George Washington was born ___ February 22, 1732.", 
     "She wears a ring ___ her finger."],
-  at = [
+  at: [
     "I lost my shoe ___ the beach.", 
     "He is good ___ singing.", 
     "She let her dog run around ___ the park.", 
     "We will meet for dinner ___ 6:00 p.m. tonight.", 
     "He saw a movie ___ the movie theater."],
-  from = [
+  from: [
     "She is ___ Colorado.", 
     "I got a gift ___ my friend.", 
     "Paper is made ___ trees.", 
     "He can see the beach ___ his apartment.", 
     "The store is open ___ 8:00 a.m. to 6:00 p.m. daily."], 
-  to = [
+  to: [
     "He gave the letter ___ her.", 
     "The book belongs ___ the boy.", 
     "We are going ___ Europe for vacation.", 
     "He goes ___ school at Iowa State.", 
     "I am in class from 9 ___ 3 every day."],
-  by = [
+  by: [
     "She put the vase ___ the window.", 
     "They were sitting ___ the lake.", 
     "I like to travel ___ plane.", 
@@ -33,6 +33,20 @@ exercises: {
     "We live ___ the university."]
   }
 
+
+
+a = exercises.on[Math.floor(Math.random() * exercises.on.length)]
+b = exercises.at[Math.floor(Math.random() * exercises.at.length)]
+c = exercises.from[Math.floor(Math.random() * exercises.from.length)]
+d = exercises.to[Math.floor(Math.random() * exercises.to.length)]
+e = exercises.by[Math.floor(Math.random() * exercises.by.length)]
+
+question = prompt(a)
+
+
+
+//alert(exercises.at) //alerts all sentences for "at"
+//alert(exercises.on[1]) //alerts sentence in position 0 for the preposition "on"
 
 // counts = {}
 //   
