@@ -6,7 +6,6 @@ Title: <input type="text" id="title" style="font-size: 50px;"><br>
 <button id="search" style="font-size: 100px; margin-top: 50px;">Search</button>
 </div>
 <script>
-
 all_books = [
 {
   title: 'My cool book',
@@ -27,11 +26,12 @@ all_books = [
 
 $('#search').click(function() {
   author = $('#author').val()
-  a = author.toLowerCase()
   title = $('#title').val()
-  t = title.toLowerCase()
   for (i=0; i<all_books.length; i++) {
-    if (all_books[i].a === a && all_books[i].t === t) {
+    if (
+      (author.length === 0 || all_books[i].author.toUpperCase().indexOf(author.toUpperCase()) >= 0) &&
+      (title.length === 0 || all_books[i].title.toUpperCase().indexOf(title.toUpperCase()) >= 0)
+    ) {
 	  //alert("Eureka! I found the book!")
 	  $('#div').html(JSON.stringify(all_books[i]))
 	}
