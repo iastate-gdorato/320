@@ -1,5 +1,10 @@
 <script>
-fruits = ["apple", "banana", "orange", "pear", "strawberry"]
-b = parseInt(Math.random() * fruits.length)
-alert(fruits[b])
+//fruits = ["apple", "banana", "orange", "pear", "strawberry"]
+fruits = {
+  apple: [ "red", "yellow", "green"],
+  berry: [ "strawberry", "blueberry", "blackberry"]
+  }
+b = fruits.apple[Math.floor(Math.random() * fruits.apple.length)]
+c = fruits.berry[Math.floor(Math.random() * fruits.berry.length)]
+alert(c)
 </script>
