@@ -30,48 +30,82 @@ exercises = {
     "They were sitting ___ the lake.", 
     "I like to travel ___ plane.", 
     "The blanket was made ___ my mom.", 
-    "We live ___ the university."]
+    "We live ___ the ocean."]
   }
 
+counts_a = 0
+counts_b = 0
+counts_c = 0
+counts_d = 0
+counts_e = 0
 
+do {
+  a = exercises.on[Math.floor(Math.random() * exercises.on.length)]
+  answer_a = prompt(a)
+    if (answer_a === "on") {
+      alert("Correct!")
+      counts_a++
+        }
+      else {
+        alert(a.replace("___", "on"))
+        counts_a = counts_a - 1
+        }
+  } while (counts_a < 1) 
+    
+do {
+  b = exercises.at[Math.floor(Math.random() * exercises.at.length)]
+  answer_b = prompt(b)
+    if (answer_b === "at") {
+      alert("Correct!")
+      counts_b++
+      }
+    else {
+      alert(b.replace("___", "at"))
+      counts_b = counts_b - 1
+      }
+  } while (counts_b < 1)
 
-a = exercises.on[Math.floor(Math.random() * exercises.on.length)]
-b = exercises.at[Math.floor(Math.random() * exercises.at.length)]
-c = exercises.from[Math.floor(Math.random() * exercises.from.length)]
-d = exercises.to[Math.floor(Math.random() * exercises.to.length)]
-e = exercises.by[Math.floor(Math.random() * exercises.by.length)]
+do {
+  c = exercises.from[Math.floor(Math.random() * exercises.from.length)]
+  answer_c = prompt(c)
+    if (answer_c === "from") {
+      alert("Correct!")
+      counts_c++
+      }
+    else {
+      alert(c.replace("___", "from"))
+      counts_c = counts_c - 1
+      }
+  } while (counts_c < 1)
 
-question = prompt(a)
+do {
+  d = exercises.to[Math.floor(Math.random() * exercises.to.length)]
+  answer_d = prompt(d)
+    if (answer_d === "to") {
+      alert("Correct!")
+      counts_d++
+      }
+    else {
+      alert(d.replace("___", "to"))
+      counts_d = counts_d - 1
+      }
+  } while (counts_d < 1)
 
-
-
-//alert(exercises.at) //alerts all sentences for "at"
-//alert(exercises.on[1]) //alerts sentence in position 0 for the preposition "on"
-
-// counts = {}
-//   
-//   for (i = 0; i < exercises.length; i ++) {
-//     if (!counts[exercises[i]]) {
-//       counts[exercises[i]] = 1
-//       }
-//     else {
-//       counts[words[i]]++
-//       }  
-//     }
+do {
+  e = exercises.by[Math.floor(Math.random() * exercises.by.length)]
+  answer_e = prompt(e)
+    if (answer_e === "by") {
+      alert("Correct!")
+      counts_e++
+      }
+    else {
+      alert(e.replace("___", "by"))
+      counts_e = counts_e - 1
+      }
+  } while (counts_e < 1)
+  
   //if answer right, count increases by 1
   //if answer wrong, count decreases by 1
-
+//if correct more than incorrect move to next preposition
 
 </script>
-
-<!-- 
-exercises: {
-  on: [questions 1-5],
-  in: [questions 1-5],
-  prep3:...
-  }
-  
-exercises[on][math random]
-
-use replace function to replace the ___ with the correct preposition in the answer
- -->
