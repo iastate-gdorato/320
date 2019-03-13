@@ -1,0 +1,18 @@
+<p>Input:<br><textarea id="input" rows="10" cols="80"></textarea>
+<p><button onclick="process()">Process</button>
+<p>Output:<br><textarea id="output" rows="10" cols="80"></textarea>
+
+<script>
+
+function process() {
+  x = document.getElementById("input").value
+//replace line 9 with your regular expression  //y = x.toLowerCase()
+ 
+ y = x.replace(/ +/g, " ") //assignment: replace sequences of spaces with just one space
+ y = y.replace(/\s*\n\s*/g, "\n")  //remove spaces at the beginning and end of each line
+ y = y.replace(/^\s*/g, "")  //removes space at beginning of line
+ 
+  document.getElementById("output").value = y
+}
+
+</script>
