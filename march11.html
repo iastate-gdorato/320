@@ -1,0 +1,23 @@
+<script>
+
+// x = prompt("Enter phone number in any format")
+// //x = 'rejgtrfnjsjdfjef (51-5)    294 6-9-5-8'
+// y = x.replace(/.*(\d).*(\d).*(\d).*(\d).*(\d).*(\d).*(\d).*(\d).*(\d).*(\d).*/, "($1$2$3) $4$5$6-$7$8$9$10")
+// alert(y)
+
+// x = prompt("Enter a phrase")
+// x = x.replace(/\ba\b ([aeiou])/gi, "an $1").replace(/\ban\b ([^aeiou])/gi, "a $1")
+// //x = x.replace(/\ban\b ([^aeiou])/gi, "a $1")
+// //g means global, i means case insensitive, m means multi-line
+// //syntax is: variable = string.replace(/regular expression/, "substitution")
+// alert(x)
+
+x = prompt("Enter a phrase")
+x = x.replace(/[aeiou]/gi, "")
+arr = x.split("")
+arr.reverse()
+arabic = arr.join("")
+//to delete something you replace it with nothing so ""
+alert(arabic)
+
+</script>
