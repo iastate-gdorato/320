@@ -1,0 +1,17 @@
+<script>
+x = prompt("Enter a phrase in English")
+
+//y = x.replace(/([aeiouy])(\w*e\b)/g, "aig$1$2")
+//if final "e" with other vowels, do not replace
+
+//z = x.replace(/([aeiouy])([aeiou]*)/g, "aig$1$2") 
+//if multiple consecutive vowels, only replace one  //replace vowels with aig + keep vowel
+
+
+y = x.replace(/([aeiouy])([aeiouy]*)/gi, "aig$1$2")
+z = y.replace(/(aig[aeiouy])(\w*)aig(e\b)/gi, "$1$2$3")
+
+
+alert(z)
+
+</script>
