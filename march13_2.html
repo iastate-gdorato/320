@@ -1,5 +1,10 @@
 <script>
-x = prompt("Enter a name")
-y = x.replace(/(\S*) (\S*)/g, "$2, $1")
+// x = prompt("Enter a name")
+// y = x.replace(/(\S*)\s+(\S*)/g, "$2, $1") //changes First Last to Last, First
+// alert(y)
+
+x = prompt("Enter a word in American English")
+y = x.replace(/(.+o)(rs*)/g, "$1u$2")
+y = y.replace(/(.+)(e)(r)(s*)/g, "$1$3$2$4")
 alert(y)
 </script>
