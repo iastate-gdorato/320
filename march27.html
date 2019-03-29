@@ -1,0 +1,19 @@
+<script>
+//prompt, put into variable, series of if statements with regular expressions as responses
+
+x = prompt("Hello, how are you today?")
+
+while(true) {
+  if(/\b(good|great|fantastic)\b/i.test(x)) {
+    a = prompt("Thats good")
+    }
+  else if(/\b(bad|terrible)\b/i.test(x)){
+    b = prompt("I'm sorry you are feeling that way, what's wrong?")
+    }
+  else {
+    c = prompt("Tell me more about that")
+    }
+}
+
+
+</script>
