@@ -5,24 +5,15 @@
 // don't suggest class multiple times - I already suggested you take ___ for that
 
 x = prompt("Hello! What is an area of linguistics are you interested in?")
-
-other [
-	"LING 101: Introduction to the Study of Linguistics",
-	"LING 119: Intro to World Languages",
-	"LING 207: Intro to Symbolic Logic",
-	"LING 219: Intro to Linguistics",
-	"LING 320: Topics in Linguistic Structure",
-	"LING 420: History of the English Language"
-	]
-
+	
 grammar = [ 
 	"LING 220: Descriptive English Grammar",
-	"LING 437: Grammatical Analysis"
+	" LING 437: Grammatical Analysis"
 	]
 
 phonetics = [ 
-	"LING 352: Intro to Spanish Phonology (must know Spanish)"
-	"LING 371: Phonetics & Phonology"
+	"LING 352: Intro to Spanish Phonology (must know Spanish)",
+	"LING 371: Phonetics & Phonology",
 	"LING 420: History of the English Language"
 	]
 
@@ -68,4 +59,55 @@ spanish = [
 psychology = [
 	"LING 413: Psychology of Language"
 	]
+
+intro = [ 
+	"LING 101: Introduction to the Study of Linguistics",
+	"LING 119: Intro to World Languages",
+	"LING 219: Intro to Linguistics"
+	]
+	
+other = [
+	"LING 207: Intro to Symbolic Logic",
+	"LING 320: Topics in Linguistic Structure",
+	"LING 420: History of the English Language"
+	]	
+
+if (/\b(grammar|syntax|diagram)\b/.test(x)) {
+    y = prompt("Your options are: " + grammar + ". How does that sound?")
+  } 
+  else if (/\b(phonetics|phonology|sounds)\b/.test(x)) {
+    y = prompt("Your options are: " + phonetics + ". How does that sound?")
+  } 
+  else if (/\b(TESL|teaching|second language|foreign language)\b/.test(x)) {
+    y = prompt("Your options are: " + TESL + ". How does that sound?")
+  }
+  else if (/\b(communication disorders|speech pathology|therapy)\b/.test(x)) {
+    y = prompt("Your options are: " + comm_disorders + ". How does that sound?")
+  }
+  else if (/\b(computers|programming)\b/.test(x)) {
+    y = prompt("Your options are: " + commputers + ". How does that sound?")
+  }
+  else if (/\b(sociolinguistics|social)\b/.test(x)) {
+    y = prompt("Your options are: " + sociolinguistics + ". How does that sound?")
+  }
+  else if (/\b(spanish|interpreting|translation)\b/.test(x)) {
+    y = prompt("Your options are: " + spanish + ". How does that sound?")
+  }
+  else if (/\b(psychology|psycholinguistics|language acquisition)\b/.test(x)) {
+    y = prompt("Your option is: " + psychology + ". How does that sound?")
+  }
+  else if (/\bI don't know\b/.test(x)) {
+    y = prompt("Your options are: " + intro + ". How does that sound?")
+  }
+  else {
+    y = prompt("Your options are: " + other + ". How does that sound?")
+  }
+  
+if(/\b(good)\b/.test(y)) {
+	x = prompt("Good! Is there anything else you are interested in?")
+	}
+	else if (/\b(bad)\b/.test(y)) {
+	x = prompt("I'm sorry. What else are you interested in?")
+	}
+	
 </script>
