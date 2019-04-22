@@ -1,0 +1,16 @@
+<p>Input:<br><textarea id="input" rows="10" cols="80"></textarea>
+<p><button onclick="process()">Process</button>
+<p>Output:<br><textarea id="output" rows="10" cols="80"></textarea>
+
+<script>
+
+function process() {
+  x = document.getElementById("input").value
+  //sentence =  x.split(/(\b\.\s|\b\!\s)/)
+  sentence = x.split(". ")
+  count = sentence.length
+  
+  document.getElementById("output").value = count
+}
+
+</script>
